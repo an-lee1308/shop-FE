@@ -26,6 +26,7 @@ const Products = (props) => {
   const { category } = props.match.params;
   const type = query.get("type") || 1;
   const value = query.get("q") || null;
+  console.log(useLocation(), "hiiiiiiiii", useLocation().search);
   useEffect(() => {
     const getProduct = async () => {
       setListProduct({ ...ListProduct, isLoading: true });
@@ -55,7 +56,6 @@ const Products = (props) => {
       settotalPage(Data.totalPage);
     };
     getProduct();
-    console.log(props.location);
   }, [props.location, option]);
   useEffect(() => {
     window.scrollTo({
