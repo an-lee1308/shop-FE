@@ -37,7 +37,7 @@ function Register(props) {
   }
   async function regiterUser(data) {
     var Data = await axiosClient({
-      url: `http://localhost:8080/api/auth/register`,
+      url: `https://radiant-wave-89582.herokuapp.com/api/auth/register`,
       method: "post",
       data: {
         username: data.username,
@@ -84,7 +84,7 @@ function Register(props) {
   }
   function responseFacebook(response) {
     axiosClient({
-      url: `http://localhost:8080/api/auth/register/facebook`,
+      url: `https://radiant-wave-89582.herokuapp.com/api/auth/register/facebook`,
       method: "post",
       data: {
         username: response.email,
@@ -96,7 +96,7 @@ function Register(props) {
     }).then((data) => {
       if (data.statusCode == 200) {
         axiosClient({
-          url: `http://localhost:8080/api/auth/login`,
+          url: `https://radiant-wave-89582.herokuapp.com/api/auth/login`,
           method: "post",
           data: {
             username: response.email,
@@ -116,7 +116,7 @@ function Register(props) {
   function responseGoogle(response) {
     console.log(response);
     axiosClient({
-      url: `http://localhost:8080/api/auth/register/facebook`,
+      url: `https://radiant-wave-89582.herokuapp.com/api/auth/register/facebook`,
       method: "post",
       data: {
         username: response.profileObj.name,
@@ -128,7 +128,7 @@ function Register(props) {
     }).then((data) => {
       if (data.statusCode == 200) {
         axiosClient({
-          url: `http://localhost:8080/api/auth/login`,
+          url: `https://radiant-wave-89582.herokuapp.com/api/auth/login`,
           method: "post",
           data: {
             username: response.profileObj.name,

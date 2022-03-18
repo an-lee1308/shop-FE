@@ -33,7 +33,7 @@ const Products = (props) => {
       var Data;
       if (category == "search") {
         Data = await CallApi({
-          url: `http://localhost:8080/api/products?search=${value}${
+          url: `https://radiant-wave-89582.herokuapp.com/api/products?search=${value}${
             option.sort ? "&sort=" + option.sort : ""
           }${option.max ? "&max=" + option.max : ""}${
             option.min ? "&min=" + option.min : ""
@@ -42,7 +42,7 @@ const Products = (props) => {
         });
       } else {
         Data = await CallApi({
-          url: `http://localhost:8080/api/products/${category}?${
+          url: `https://radiant-wave-89582.herokuapp.com/api/products/${category}?${
             page ? "page=" + page : ""
           }&${type ? "type=" + type : ""}${
             option.sort ? "&sort=" + option.sort : ""

@@ -3,7 +3,7 @@ import CallApi from "../helper/axiosClient";
 
 export const getApiUser = () => (dispatch) => {
   CallApi({
-    url: "http://localhost:8080/api/auth/user",
+    url: "https://radiant-wave-89582.herokuapp.com/api/auth/user",
     method: "get",
   }).then((data) => {
     if (data && data.statusCode == 200) {

@@ -17,7 +17,7 @@ function Register(props) {
   function onSubmitForgotPassword(e) {
     e.preventDefault();
     axiosClient({
-      url: `http://localhost:8080/api/auth/forgot`,
+      url: `https://radiant-wave-89582.herokuapp.com/api/auth/forgot`,
       method: "post",
       data: {
         email: Email,

@@ -40,7 +40,7 @@ function AdminOrderItem(props) {
           label: "Yes",
           onClick: () => {
             AxiosInstance({
-              url: "http://localhost:8080/api/auth/order/accept",
+              url: "https://radiant-wave-89582.herokuapp.com/api/auth/order/accept",
               method: "post",
               data: ListOrder,
             }).then((data) => {
@@ -68,7 +68,7 @@ function AdminOrderItem(props) {
           label: "Yes",
           onClick: () => {
             AxiosInstance({
-              url: "http://localhost:8080/api/auth/order/cancel",
+              url: "https://radiant-wave-89582.herokuapp.com/api/auth/order/cancel",
               method: "post",
               data: ListOrder,
             }).then((data) => {
@@ -175,7 +175,7 @@ function AdminOrder() {
       isLoading: true,
     });
     AxiosInstance({
-      url: "http://localhost:8080/api/auth/orders",
+      url: "https://radiant-wave-89582.herokuapp.com/api/auth/orders",
       method: "get",
     }).then((data) => {
       setListOrder({

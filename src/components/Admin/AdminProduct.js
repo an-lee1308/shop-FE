@@ -67,7 +67,7 @@ function AddProduct(props) {
     if (data && data._id) {
       formData.append("id", data._id);
       axiosClient({
-        url: "http://localhost:8080/api/product",
+        url: "https://radiant-wave-89582.herokuapp.com/api/product",
         method: "put",
         data: formData,
       }).then((data) => {
@@ -79,7 +79,7 @@ function AddProduct(props) {
       });
     } else {
       axiosClient({
-        url: "http://localhost:8080/api/product",
+        url: "https://radiant-wave-89582.herokuapp.com/api/product",
         method: "post",
         data: formData,
       }).then((data) => {
@@ -244,7 +244,7 @@ function AdminProductItem(props) {
   }
   function onDeleteProduct() {
     axiosClient({
-      url: "http://localhost:8080/api/product",
+      url: "https://radiant-wave-89582.herokuapp.com/api/product",
       method: "DELETE",
       data: {
         id: _id,
@@ -294,7 +294,7 @@ function AdminProduct() {
   useEffect(() => {
     setListProduct({ ...ListProduct, loading: true });
     axiosClient({
-      url: "http://localhost:8080/api/admin/products",
+      url: "https://radiant-wave-89582.herokuapp.com/api/admin/products",
       method: "get",
     }).then((data) => {
       setListProduct({
